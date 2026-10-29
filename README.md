@@ -19,11 +19,13 @@
 
 每人用自己的名字建分支，例如 `feat/zhuchenyu-eda`，完成后向 `main` 提交 Pull Request。
 
-## 推送流程（简版）
+## 推送流程（Fork + Pull Request）
+
+本仓库为**公开**仓库，无需邀请。先 Fork 到自己账号，再改动、提 PR：
 
 ```bash
-# 1) 克隆（被项目负责人加为协作者后才能克隆私有仓库）
-git clone https://github.com/MaiSukrajima/blueberry-yield-prediction.git
+# 1) 在仓库网页点右上角 Fork，复制到自己账号；然后克隆自己的 fork
+git clone https://github.com/你的用户名/blueberry-yield-prediction.git
 cd blueberry-yield-prediction
 
 # 2) 建自己的分支（不要在 main 上直接改）
@@ -33,10 +35,10 @@ git checkout -b feat/你的名字-模块
 git add .
 git commit -m "feat: 简单说明这次做了什么"
 
-# 4) 推到远端
+# 4) 推送到自己的 fork
 git push -u origin feat/你的名字-模块
 
-# 5) 打开仓库网页，点 "Compare & pull request"，向 main 提 PR，由负责人合并
+# 5) 回到原仓库网页，点 "Compare & pull request"，向 main 提 PR
 ```
 
 > **首次推送登录**：用户名填 GitHub 用户名，密码填 **Personal Access Token（PAT）**，不是登录密码。
