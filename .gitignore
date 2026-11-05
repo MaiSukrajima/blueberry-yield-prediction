@@ -16,3 +16,7 @@ venv/
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# 数据层（见 docs/DATA_CONTRACT.md 1.5 节）：原始数据与衍生数据都不入库
+data/raw/
+data/processed/
