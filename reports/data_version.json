@@ -1,0 +1,25 @@
+{
+  "data_version": "wildblueberry-777-v2.1",
+  "dataset_name": "Wild Blueberry Yield Prediction",
+  "file": "WildBlueberryPollinationSimulationData.csv",
+  "md5": "feffa3af1cbb3c8860f4ae34241adc3d",
+  "bytes": 85259,
+  "rows": 777,
+  "cols": 18,
+  "id_col": "Row#",
+  "target": "yield",
+  "n_features": 16,
+  "source": {
+    "primary": "https://www.kaggle.com/datasets/saurabhshahane/wild-blueberry-yield-prediction",
+    "mirror": "https://www.kaggle.com/datasets/shashwatwork/wild-blueberry-yield-prediction-dataset",
+    "access": "Kaggle Datasets 公开下载接口，无需登录 / 无需 API Token",
+    "academic_origin": "Obsie, Qu, Drummond (2020), Mendeley Data",
+    "doi": "10.17632/p5hvjzsvn8.1",
+    "license": "CC BY 4.0"
+  },
+  "folds_version": "folds-777-v2.0",
+  "created_at": "2026-11-03 20:10:15",
+  "revised_at": "2026-11-03 20:45:00",
+  "revision_note": "v2.1 仅更正文档表述（与竞赛版关系改为同源不同批次、Row# 泄漏改为实测未泄漏）。数据文件 md5、行数、折划分、基线分数全部未变动，无需重新下载或重跑。",
+  "supersedes": "competition-15000-v1.2（已归档至 data/_archive_competition_v1/）"
+}
