@@ -2,9 +2,13 @@
 
 团队协作仓库（8 人）。任务：用环境、生物、气候类特征预测蓝莓产量 `yield`（回归）。
 
-- 竞赛主页与数据下载：https://www.kaggle.com/competitions/deep-blueberry-challenge-2025
-- 数据文件：`train.csv`（15000 × 19，含目标 `yield`）/ `test.csv` / `sample_submission.csv`，官方声明**无缺失值**
+- 数据源：Kaggle 公开数据集 **Wild Blueberry Yield Prediction**（Obsie, Qu & Drummond 2020，CC BY 4.0）
+- 数据文件：`data/raw/WildBlueberryPollinationSimulationData.csv`，**777 行 × 18 列**（16 特征 + `Row#` + 目标 `yield`），**无缺失值**
+- 获取方式见 [`data/README.md`](data/README.md)，一条命令即可：`python src/data/fetch_dataset.py`（**无需 Kaggle 账号**）
 - 评估指标：RMSE / MAE
+
+> ⚠️ **数据源已变更（2026-11）。** 原选题 `DeepBlueberry Challenge 2025` 为邀请制竞赛、无法下载，已改用上述公开数据集。
+> 规模由 15000×19 变为 777×18，**基于旧数据的折划分与基线分数全部作废**。数据口径以 [`docs/DATA_CONTRACT.md`](docs/DATA_CONTRACT.md) 为准。
 
 ## 目录结构
 
