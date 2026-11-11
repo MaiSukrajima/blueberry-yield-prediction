@@ -1,0 +1,256 @@
+{
+  "experiment": "baseline-v1",
+  "created_at": "2026-11-11T16:30:12.244286+09:00",
+  "timezone": "Asia/Tokyo",
+  "data_version": "wildblueberry-777-v2.1",
+  "folds_version": "folds-777-v2.0",
+  "seed": 42,
+  "data_md5": "feffa3af1cbb3c8860f4ae34241adc3d",
+  "folds_sha256": "8cc561ee6c8b6413b9107df65ca36f27c0fc3d5ed3796abbddc7d7d41e812e48",
+  "config_sha256": "0dc766c53996c7e43b52770d6553d4f319b0d87b4588a948b8795ee013396c51",
+  "source": {
+    "git_commit": "04dfdf0eaf633a575ac05a9a7947dcd8499cd04c",
+    "source_sha256": "6b826af99d051f25c49c046b87bc6340a1c5ded97aed1e75183e1f89b6d9603f",
+    "files_sha256": {
+      "configs/baseline.json": "0dc766c53996c7e43b52770d6553d4f319b0d87b4588a948b8795ee013396c51",
+      "README_BASELINE.md": "ba896c367c99fee2f4f7dd139eb23b82e8b9dc3d6ea9095fc6e522a64dcd4df8",
+      "requirements-baseline.txt": "8eca315365f9f0fadcee0bac1d7e8c00e5f551e5c46be4991ed929bd999f03fa",
+      "requirements.txt": "74f4798d942cbbb37c88e873ce1e6327c3ff9585ec918683a8f7921d76b19c69",
+      "src/__init__.py": "977b8b86e9aa1eb099aed0737f5221038f622d77e93ddbd541aa4d175fde0412",
+      "src/data/__init__.py": "e6bf9031667ab2755cb1dead012e3969113e5feac554b666872af8b7bebe0c00",
+      "src/data/baselines.py": "e1b35ee1908af2d6af3a746470fbb45e19de882ecb19233dbff27896072883d3",
+      "src/data/fetch_dataset.py": "769832e13376a01514bec54b3db585dcdfd6d61e2f36d66dc346f5daa5009ba7",
+      "src/data/loader.py": "9a7e7141ace7b8600ef52b5a74e8c8f025649831dc0139e0d5c9adaa487fde4e",
+      "src/data/make_folds.py": "a8f0b3346f32bf83d543ca120084fd16101c7a53555e5a3f3462c3e41d9b7a63",
+      "src/data/validate_data.py": "ecaa4f5b1aede568782f77c056b4dc8f99de5c2f4ad0bfd4afac20bfc473e276",
+      "src/data/verify_provenance.py": "93ef39dbd5f64336a1f6a41618028162d49e17399d7e7d9e0cb18cf75fc4945d",
+      "src/models/__init__.py": "e2f8163ce1888167c8802e453ba900e26043ae6da429b46cd381c074f0765d36",
+      "src/models/predict_baseline.py": "66c77673dcc4d9e172a85250771089b8bb7da918a293b0692be651f6ceb03ce6",
+      "src/models/train_baseline.py": "4eb356dabc940f4d090214f838ffb2d3428606ae330d9ef5ffdd9475589cd5a4",
+      "tests/test_baseline.py": "6d69a38395c1cd891dc5340e5422be84031173e0041e7ebd64d456ec343beb35"
+    }
+  },
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "packages": {
+      "numpy": "2.3.5",
+      "pandas": "2.3.3",
+      "scipy": "1.16.3",
+      "scikit-learn": "1.7.2",
+      "joblib": "1.5.2",
+      "threadpoolctl": "3.6.0",
+      "matplotlib": "3.10.7"
+    }
+  },
+  "feature_columns": [
+    "clonesize",
+    "honeybee",
+    "bumbles",
+    "andrena",
+    "osmia",
+    "MaxOfUpperTRange",
+    "MinOfUpperTRange",
+    "AverageOfUpperTRange",
+    "MaxOfLowerTRange",
+    "MinOfLowerTRange",
+    "AverageOfLowerTRange",
+    "RainingDays",
+    "AverageRainingDays",
+    "fruitset",
+    "fruitmass",
+    "seeds"
+  ],
+  "target": "yield",
+  "n_cv": 621,
+  "n_holdout": 156,
+  "holdout_used": false,
+  "holdout_mae": null,
+  "final_all777_model": false,
+  "metric_protocol": "MAE/RMSE/R2 on 621 concatenated OOF predictions; fold SD uses ddof=1",
+  "timing_protocol": "fit and validation predict separately; train scoring, serialization, plotting excluded",
+  "results": [
+    {
+      "model": "dummy_mean",
+      "oof_mae": 1103.7714784635143,
+      "oof_rmse": 1354.365794204829,
+      "oof_r2": -7.786948668764282e-05,
+      "fold_mae_mean": 1103.7890510953375,
+      "fold_mae_std": 8.877721703861974,
+      "train_mae_mean": 1103.7706071837117,
+      "cv_fit_seconds": 0.002947900000435766,
+      "oof_predict_seconds": 0.001124699998399592,
+      "refit_cv621_seconds": 0.00026330000036978163
+    },
+    {
+      "model": "linear_regression",
+      "oof_mae": 117.81773851762006,
+      "oof_rmse": 562.5973254968964,
+      "oof_r2": 0.8274332221560013,
+      "fold_mae_mean": 117.85931027606232,
+      "fold_mae_std": 52.048230135755354,
+      "train_mae_mean": 93.1715526436366,
+      "cv_fit_seconds": 0.012493299998823204,
+      "oof_predict_seconds": 0.004988400000002002,
+      "refit_cv621_seconds": 0.0020309999999881256
+    },
+    {
+      "model": "random_forest",
+      "oof_mae": 123.14070913655404,
+      "oof_rmse": 164.1011598994003,
+      "oof_r2": 0.9853180018497794,
+      "fold_mae_mean": 123.12306812525878,
+      "fold_mae_std": 8.537261594278215,
+      "train_mae_mean": 46.148954223876075,
+      "cv_fit_seconds": 1.4965674000031868,
+      "oof_predict_seconds": 0.02695289999974193,
+      "refit_cv621_seconds": 0.38911689999986265
+    },
+    {
+      "model": "ridge_reference",
+      "oof_mae": 98.78506350381409,
+      "oof_rmse": 129.83868377698306,
+      "oof_r2": 0.9908088453834898,
+      "fold_mae_mean": 98.78421497961457,
+      "fold_mae_std": 6.577427495850218,
+      "train_mae_mean": 97.30711203775823,
+      "cv_fit_seconds": 0.012061999999787076,
+      "oof_predict_seconds": 0.004199100001642364,
+      "refit_cv621_seconds": 0.0022735000002285233
+    }
+  ],
+  "reference_reproduction": {
+    "dummy_mean": {
+      "supplied_oof_mae": 1103.7714784635143,
+      "actual_oof_mae": 1103.7714784635143,
+      "absolute_delta": 0.0
+    },
+    "ridge_reference": {
+      "supplied_oof_mae": 98.78506350381326,
+      "actual_oof_mae": 98.78506350381409,
+      "absolute_delta": 8.242295734817162e-13
+    },
+    "random_forest": {
+      "supplied_oof_mae": 123.14070913655401,
+      "actual_oof_mae": 123.14070913655404,
+      "absolute_delta": 2.842170943040401e-14
+    }
+  },
+  "cv_analysis": {
+    "fruitset_yield_pearson_cv_only": 0.9844402658512662,
+    "temperature_max_abs_pearson_cv_only": 0.9999613285465482,
+    "largest_ols_error": {
+      "row_id": 775,
+      "fold": 3,
+      "actual": 4166.299735,
+      "predictions": {
+        "dummy_mean": 6015.043895760563,
+        "linear_regression": -9494.449837731812,
+        "random_forest": 4217.518764860001,
+        "ridge_reference": 4429.785630226132
+      },
+      "absolute_error": 13660.749572731813,
+      "out_of_training_range_features": {
+        "MinOfUpperTRange": {
+          "value": 39.0,
+          "train_min": 42.1,
+          "train_max": 57.2
+        }
+      },
+      "note": "Retained without deletion or clipping; diagnosis uses CV training fold only"
+    }
+  },
+  "checkpoints": {
+    "dummy_mean": {
+      "path": "models/dummy_mean_cv621.joblib",
+      "sha256": "3d508c4a3b6f80234ef8e8bde2a9a37cad3054705b35b0b89a7b29050240e9d7",
+      "trained_rows": 621,
+      "includes_holdout": false,
+      "parameters": {
+        "model__constant": null,
+        "model__quantile": null,
+        "model__strategy": "mean"
+      }
+    },
+    "linear_regression": {
+      "path": "models/linear_regression_cv621.joblib",
+      "sha256": "8e2a490d26b80c659aa7c9bcf3b632cb948d17824341ddc1859838595e757f48",
+      "trained_rows": 621,
+      "includes_holdout": false,
+      "parameters": {
+        "scaler__copy": true,
+        "scaler__with_mean": true,
+        "scaler__with_std": true,
+        "model__copy_X": true,
+        "model__fit_intercept": true,
+        "model__n_jobs": null,
+        "model__positive": false,
+        "model__tol": 1e-06
+      },
+      "rank": 14,
+      "singular_values": [
+        61.10590937109683,
+        50.39982052338508,
+        35.5484507812148,
+        27.102575860091463,
+        25.046104633902083,
+        22.924199385682947,
+        17.85501467739794,
+        13.177985965488299,
+        2.6976952745266343,
+        2.3889801847695007,
+        2.0070917220553603,
+        1.1702889993143215,
+        0.11655896572266204,
+        0.021360458945097794,
+        1.3961618723261333e-14,
+        2.6115765234765277e-15
+      ]
+    },
+    "random_forest": {
+      "path": "models/random_forest_cv621.joblib",
+      "sha256": "c424a30435d57ebb5da6611fdea4153f51b40f2856a30244eb96016f8965696c",
+      "trained_rows": 621,
+      "includes_holdout": false,
+      "parameters": {
+        "model__bootstrap": true,
+        "model__ccp_alpha": 0.0,
+        "model__criterion": "squared_error",
+        "model__max_depth": null,
+        "model__max_features": 1.0,
+        "model__max_leaf_nodes": null,
+        "model__max_samples": null,
+        "model__min_impurity_decrease": 0.0,
+        "model__min_samples_leaf": 1,
+        "model__min_samples_split": 2,
+        "model__min_weight_fraction_leaf": 0.0,
+        "model__monotonic_cst": null,
+        "model__n_estimators": 100,
+        "model__n_jobs": 1,
+        "model__oob_score": false,
+        "model__random_state": 42,
+        "model__verbose": 0,
+        "model__warm_start": false
+      }
+    },
+    "ridge_reference": {
+      "path": "models/ridge_reference_cv621.joblib",
+      "sha256": "5e21574029b7e3ae0e3165bcafee8cc1138e492f019999ead6c0b9f2689f4d34",
+      "trained_rows": 621,
+      "includes_holdout": false,
+      "parameters": {
+        "scaler__copy": true,
+        "scaler__with_mean": true,
+        "scaler__with_std": true,
+        "model__alpha": 1.0,
+        "model__copy_X": true,
+        "model__fit_intercept": true,
+        "model__max_iter": null,
+        "model__positive": false,
+        "model__random_state": null,
+        "model__solver": "auto",
+        "model__tol": 0.0001
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "experiment": "baseline-v1",
+  "seed": 42,
+  "data_version": "wildblueberry-777-v2.1",
+  "folds_version": "folds-777-v2.0",
+  "folds_sha256": "8cc561ee6c8b6413b9107df65ca36f27c0fc3d5ed3796abbddc7d7d41e812e48",
+  "models": ["dummy_mean", "linear_regression", "random_forest", "ridge_reference"],
+  "random_forest": {
+    "n_estimators": 100,
+    "criterion": "squared_error",
+    "max_depth": null,
+    "min_samples_split": 2,
+    "min_samples_leaf": 1,
+    "max_features": 1.0,
+    "bootstrap": true,
+    "n_jobs": 1
+  },
+  "ridge_alpha": 1.0,
+  "holdout_policy": "frozen_no_training_no_prediction_no_evaluation"
+}

@@ -1,0 +1,94 @@
+{
+  "baseline_tests": {
+    "count": 10,
+    "passed": true
+  },
+  "commands": [
+    {
+      "command": [
+        "python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_baseline.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "command": [
+        "python",
+        "tests/smoke_test.py"
+      ],
+      "exit_code": 0,
+      "passed": true
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "src.models.predict_baseline",
+        "--model",
+        "reports/baseline_models/models/linear_regression_cv621.joblib",
+        "--input",
+        "reports/baseline_models/inference_example.csv",
+        "--output",
+        "reports/baseline_models/example_predictions.csv"
+      ],
+      "exit_code": 0,
+      "passed": true
+    }
+  ],
+  "original_bundle_unchanged_files": [
+    "README.md",
+    "data/processed/folds.csv",
+    "data/processed/folds.meta.json",
+    "data/raw/WildBlueberryPollinationSimulationData.csv",
+    "docs/DATA_CONTRACT.md",
+    "docs/数据交接约定_v2.1.docx",
+    "docs/数据说明.docx",
+    "docs/数据说明.md",
+    "docs/方案对比分析.docx",
+    "docs/方案对比分析.md",
+    "reports/baselines.json",
+    "reports/baselines.md",
+    "reports/checksums.md5",
+    "reports/data_profile.md",
+    "reports/data_version.json",
+    "reports/dataset_fetch.md",
+    "reports/holdout_usage.md",
+    "reports/provenance.md",
+    "requirements.txt",
+    "src/__init__.py",
+    "src/data/__init__.py",
+    "src/data/baselines.py",
+    "src/data/fetch_dataset.py",
+    "src/data/loader.py",
+    "src/data/make_folds.py",
+    "src/data/validate_data.py",
+    "src/data/verify_provenance.py",
+    "tests/smoke_test.py"
+  ],
+  "original_bundle_intentionally_modified": [
+    ".gitignore"
+  ],
+  "holdout_used": false,
+  "original_holdout_log_unchanged": true,
+  "all_checks_passed": true,
+  "report_pages": 4,
+  "report_visual_qa_passed": true,
+  "report_renderer": "Microsoft Word PDF export and bundled pypdfium2; all four pages inspected",
+  "source_bundle_verified": true,
+  "source_commit": "04dfdf0eaf633a575ac05a9a7947dcd8499cd04c",
+  "clean_package_tests": {
+    "tests_run": 10,
+    "passed": 9,
+    "skipped": 1,
+    "skip_reason": "No .git directory in distribution; source identity retained in bundle and manifest",
+    "exit_code": 0
+  }
+}

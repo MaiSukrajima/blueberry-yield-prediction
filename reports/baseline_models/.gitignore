@@ -1,0 +1,3 @@
+# Row-level CSV and weights remain local
+*.csv
+models/
