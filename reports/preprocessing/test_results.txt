@@ -1,0 +1,17 @@
+test_clipping_uses_training_fences (test_preprocessing.PreprocessingTests.test_clipping_uses_training_fences) ... ok
+test_clone_pickle_fitted_state_and_feature_names (test_preprocessing.PreprocessingTests.test_clone_pickle_fitted_state_and_feature_names) ... ok
+test_iqr_boundaries_are_inclusive_and_audit_is_non_mutating (test_preprocessing.PreprocessingTests.test_iqr_boundaries_are_inclusive_and_audit_is_non_mutating) ... ok
+test_order_shape_and_input_immutability (test_preprocessing.PreprocessingTests.test_order_shape_and_input_immutability) ... ok
+test_rejects_forbidden_missing_extra_duplicate_and_invalid_values (test_preprocessing.PreprocessingTests.test_rejects_forbidden_missing_extra_duplicate_and_invalid_values) ... ok
+test_scalers_match_sklearn_defaults_and_invalid_options_fail (test_preprocessing.PreprocessingTests.test_scalers_match_sklearn_defaults_and_invalid_options_fail) ... ok
+test_transform_is_independent_of_validation_batch (test_preprocessing.PreprocessingTests.test_transform_is_independent_of_validation_batch)
+One sample must get the same result alone and beside an extreme row. ... ok
+test_validation_extremes_do_not_change_fitted_parameters (test_preprocessing.PreprocessingTests.test_validation_extremes_do_not_change_fitted_parameters) ... ok
+test_zero_iqr_preserves_valid_discrete_values (test_preprocessing.PreprocessingTests.test_zero_iqr_preserves_valid_discrete_values) ... ok
+test_complete_oof_and_holdout_isolation (test_preprocessing.RealCVTests.test_complete_oof_and_holdout_isolation) ... ok
+test_rejects_bad_fold_metadata_and_alignment (test_preprocessing.RealCVTests.test_rejects_bad_fold_metadata_and_alignment) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.272s
+
+OK
